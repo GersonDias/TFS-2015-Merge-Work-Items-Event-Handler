@@ -28,4 +28,8 @@ if(sourceItemIsInBranches && (targetItemIsInRelease || targetItemIsInTrunk))
 In order to deploy it to your TFS server,
 copy everything from /deploy folder to %PROGRAMFILES%\Microsoft Team Foundation Server 14.0\Application Tier\Web Services\bin\Plugins.
 
+That said, keep in mind that this works only for TFS, and not TFS-Git. Also, the above logic might not fit your business needs. 
+
+It is based on the concept that all the release branch paths have /Releases/ in them, and so on. This was necessary to stop the cumulative work item merge between branches. 
+
 For more information, read the author's [post](http://geekswithblogs.net/jakob/archive/2011/05/17/automatically-merging-work-items-in-tfs-2010.aspx)
