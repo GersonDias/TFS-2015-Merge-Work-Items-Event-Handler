@@ -1,4 +1,4 @@
-### TFS 2015 Merge Work Items Event Handler
+### TFS 2015 Merge Work Items Event Handler 
 
 I have upgraded the existing project ([TFS2013](https://mergeworkitems.codeplex.com)) to work with TFS 2015, and made few minor changes. Few services were deprecated, and had to be replaced. I also changed the logic how the **should work item be merged?** is answered.
 
@@ -26,7 +26,7 @@ if(sourceItemIsInBranches && (targetItemIsInRelease || targetItemIsInTrunk))
 ```
 
 In order to deploy it to your TFS server,
-copy everything from /deploy folder to %PROGRAMFILES%\Microsoft Team Foundation Server 14.0\Application Tier\Web Services\bin\Plugins.
+copy everything from /deploy folder/(either tfs_2015 or tfs_2015_update2 folder) to your TFS pugins folder (e to %PROGRAMFILES%\Microsoft Team Foundation Server 14.0\Application Tier\Web Services\bin\Plugins.
 
 That said, keep in mind that this works only for TFS, and not TFS-Git. Also, the above logic might not fit your business needs. 
 
